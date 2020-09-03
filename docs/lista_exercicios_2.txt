@@ -1,0 +1,66 @@
+
+1. Crie um programa que leia um número e escreva no monitor se o mesmo é POSITIVO, NEGATIVO
+ou NULO.
+escrever "Diga um numero"
+ler num
+se num = 0
+escreva "Nulo"
+se num > 0
+escreva "Possitivo"
+senao
+escreva "negativo"
+
+
+2. Calcule a área do triângulo, sabendo que a fórmula para calcular essa área é (b*h)/2.
+
+escrever "diga o tamanho da base do triangulo"
+ler base
+escrever "diga a altura do triangulo"
+ler altura
+
+area = (base*altura)/2
+escreva "area do triangulo" area
+
+
+3. Escreva um pseudocódigo que receba dois números a e b e em seguida resolva a equação ax + b
+= 0.
+escrever "valor de A"
+ler "a"
+escrever "valor de B"
+ler b
+
+result = -(b/a)
+
+escrever "o resultado é "result
+
+4. Necessita-se saber o valor a pagar no fim do mês, relativo ao consumo de eletricidade. Para tal
+deve ser pedido o preço do kWh e a quantidade de kWh consumidos durante o mês.
+escrever "Qual o consumo em kWh"
+ler consumo
+escrever "Qual o valor do Kwh"
+ler valor
+total = consumo*valor
+escrever "o total a pagar é R$"total
+
+
+5. Calcule a área de um retângulo, sabendo que a fórmula para calcular essa área é b*h.
+escrever "diga o tamanho da base do retangulo"
+ler base
+escrever "diga a altura do retangulo"
+ler altura
+
+area = base*altura
+escrever "area do retangulo "area
+
+
+6. Crie um algoritmo que efetue o cálculo da massa de ar de um pneu, sabendo
+que M=(P*V)/(0,37*(T+460)) onde M – massa, P – pressão, V – volume, T – temperatura.
+escreva "Qual a Pressao:"
+ler p
+escreva "qual o volume:"
+ler v
+Escreva "qual a temperatura"
+ler t
+
+massa =((p*v)/(0.37*(t+460)))
+escrever "massa"massa

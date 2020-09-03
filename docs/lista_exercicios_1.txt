@@ -1,0 +1,147 @@
+
+1. Faça um algoritmo para mostrar na tela a mensagem: “É preciso praticar para aprender”.
+
+escrever "É preciso praticar para aprender"
+
+
+2. Faça um algoritmo que peça o nome do usuário e em seguida mostre o mesmo na tela.
+
+escrever "Digite o seu nome: "
+ler nome
+escrever nome
+
+
+3. Faça um algoritmo que peça dois números aos usuários e em seguida multiplique-os. Mostre na tela o resultado.
+
+escrever "Digite um numero: "
+ler num
+escrever "Digite outro numero: "
+ler num2
+conta = num * num2
+escrever "n1*n2 = "conta
+
+
+4. Faça um algoritmo que lê os valores de 3 números e em seguida mostre na tela a média aritmética dos mesmos.
+
+escrever "Digite um numero: "
+ler n1
+escrever "Digite outro numero: "
+ler n2
+escrever "Digite outro numero: "
+ler n3
+media = (n1+n2+n3)/3
+escrever "Media = "media
+
+
+5. Faça um algoritmo para calcular o valor total de venda, dado que o usuário deverá entrar com o valor unitário de um produto e a quantidade vendida.
+
+escrever"Digite a quantidade vendida : "
+ler qnt
+escrever "Digite valor unitario do protudo vendido: "
+ler vlr
+total = qnt*vlr
+escrever "Valor total das vendas = " total
+
+
+6. Faça um algoritmo que deverá receber as informações do usuário (nome, cidade, UF, telefone). Em seguida o algoritmo deverá mostrar estes dados na tela.
+
+escrever "Digite seu nome: "
+ler nome
+escrever "Digite a sua cidade: "
+ler cidade
+escrever "Digite o seu estado: "
+ler uf
+escrever "Digite o seu numero de telefone: "
+ler numero
+escrever "Nome:"nome
+escrever "Cidade:"cidade
+escrever "Estado:"uf
+escrever "Numero:"numero
+
+7. Construa um algoritmo que receba um número n e imprima o valor correspondente ao seu quadrado (n²).
+
+Escrever "Digite um numero para elevar ao quadrado: "
+ler(num)
+quadrado = num * num
+Escrever "quadrado do numero informado eh: " quadrado
+
+
+fimalgoritmo
+8. Faça um algoritmo que receba como entrada o peso e a altura de uma pessoa e calcule/mostre o
+seu IMC.
+O IMC é dado pela fórmula: IMC = peso / altura².
+
+escrever "digite sua altura"
+ler altura
+escrever "digite seu peso"
+ler peso
+imc = peso/(altura*altura)
+escrever "seu imc "imc
+
+9. Faça um algoritmo que receba como entrada 2 valores inteiros e armazene em uma variável a e
+b, depois troque os valores de a com b e mostre-os na tela.
+
+escreva "valor a"
+ler a
+escreva "valor b"
+ler b
+aa = b
+bb = a
+a = aa
+b = bb
+escrever "valor a"aa
+escrever "valor b"bb
+
+10.Construa um programa que leia uma quantidade em horas, minutos, segundos e informe a
+quantidade total de segundos equivalente.
+
+escrever "Digite horas"
+ler horas
+escrever "Digite minitos"
+ler min
+escrever "Digite segundos"
+ler seg
+h_seg=horas*3600
+m_seg=min*60
+total =  h_seg + m_seg + seg
+escrever "total :"total
+
+11.Construa um programa que leia a quantidade de quilômetros rodados e a quantidade gasta de
+combustível em litros em uma viagem. Informe a média de combustível gasto em cada quilômetro
+rodado.
+escrever "digite o total de KM"
+ler km
+escrever "litros gastos"
+ler litros
+media = km/litros
+escrever "media de km por litro"media
+
+12.Construa um programa que calcule a quantidade de dinheiro gasto por um fumante com cigarros
+durante n anos.
+Para isso, é necessário ler a quantidade de cigarros que o fumante fuma por dia,
+a quantidade de anos que ele fuma e o preço médio de uma carteira de cigarros. (OBS: Cada
+carteira de cigarros contém 20 cigarros. Cada ano têm 365 dias).
+
+escrever "Quantos anos voce fuma ?"
+ler anos
+escrever "quantos cigaros voce fuma por dia"
+ler p_dias
+escrever "Valor da sua carteira de cigaro"
+ler valor
+
+carteiras = p_dias/20
+t_anos = anos*365
+total = t_anos*(carteiras*valor)
+escrever "Valor total gasto"valor
+
+13. Construa um programa que receba o preço de custo de um produto e calcule o preço final do
+mesmo sabendo:
+• O preço final é calculado através da soma do preço de custo, o valor dos impostos e o lucro
+esperado.
+• O valor dos impostos é de 45% do valor do preço de custo.
+• O lucro esperado é de 50% do valor do preço de custo.
+
+escrever "preço de custo do produto"
+ler preco_custo
+lucro = (preco_custo / 0.55) / 0.50
+escrever "Valor" lucro
