@@ -1,0 +1,67 @@
+1. Converter uma entrada do tipo  integer para um mês (por extenso) em formato String.
+	•	para mes = 0, a saída deve ser
+R: getNomeMes(mes) = "Janeiro";
+	•	Para mes = 0, a saída deverá ser: 
+R: getNomeMes(mes) = "mês inválido". 
+Entrada/Saída
+		[entrada] integer mes (nao negativo)
+		Limitações:
+		mes >= 0
+	        mes <= 11
+		saída String
+		Uma string com o nome do mês em portugues/BR 
+
+	enum lista {JANEIRO, FEV}; 
+
+
+
+2. Comparar 2 Inteiros que serão recebidos como String.
+Exemplos
+	•	Se a = "12" e b = "13", a saída deverá ser 
+	•	compararInteiros(a, b) = "menor"; 
+	•	Se a = "875" e b = "799", a saída deverá ser
+	R:	compararInteiros(a, b) = "maior"; 
+	•	Para a = "1000" e b = "1000", a saída deverá ser 	R:	compararInteiros(a, b) = "igual".
+
+
+
+
+ 
+Entrada/Saída
+	•	[entrada] string a 
+	•	Uma String representando um inteiro positivo. 
+	•	Limitações: 
+	•	 a.length() < 10 e b.length() < 10 
+	•	[entrada] string b 
+	•	Uma String representando um inteiro positivo. 
+	•	[saída] string 
+
+
+
+
+3. Encontre o menor valor inteiro, que seja maior ou igual ao valor de entrada (dividendo) que é divisível por no mínimo um inteiro do array de entrada (divisor).
+Exemplo
+Para os divisores = [2, 3, 4] e valor de entrada (dividendo = 13, a saída deverá ser:
+encontreMenorDividendo(divisores, dividendoInicial) = 14.
+Entrada/Saída
+	•	[entrada] array.integer divisores 
+	•	[entrada] integer dividendoInicial 
+	•	[saída] integer 
+	•	O menor valor não menor que o dividendoInicial que seja divisível por no mínimo um valor do array de divisores 
+
+
+
+4. Crie um método capaz de somar 2 frações reduzidas e produzir uma nova 
+Exemplo
+Para a = [3, 5] e b = [7, 5], a saída deve ser
+fractionSum(a, b) = [2, 1].
+3 / 5 + 7 / 5 = 10 / 5 = 2 / 1, a resposta é [2, 1].
+entrada/saída
+
+	•	[entrada] array.integer a 
+	•	Array a tamanho 2 representando a fracao reduzida a[0] / a[1].  
+	•	[entrada] array.integer b 
+	•	Array b de tamanho 2  representando a fracao reduzida b[0] / b[1]. 
+	•	[saída] array.integer 
+	•	Soma de a e b de forma reduzida. 
+
