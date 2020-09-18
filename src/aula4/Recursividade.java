@@ -7,6 +7,9 @@ package aula4;
 
 public class Recursividade {
 	
+	
+
+	
 	public void imprimirNumero(int fatorial, long numero) {
 		System.out.printf("O fatorial de %d é: %s", fatorial,  numero);
 	}
@@ -17,5 +20,7 @@ public class Recursividade {
 		}
 		return numero  *  fatorial(numero-1);
 	}
+	
+	
 	
 }

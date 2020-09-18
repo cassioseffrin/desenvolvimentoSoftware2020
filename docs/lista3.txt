@@ -17,13 +17,13 @@ Entrada/Saída
 
 2. Comparar 2 Inteiros que serão recebidos como String.
 Exemplos
-	•	Se a = "12" e b = "13", a saída deverá ser 
-	•	compararInteiros(a, b) = "menor"; 
-	•	Se a = "875" e b = "799", a saída deverá ser
-	R:	compararInteiros(a, b) = "maior"; 
-	•	Para a = "1000" e b = "1000", a saída deverá ser 	R:	compararInteiros(a, b) = "igual".
-
-
+ Se a = "12" e b = "13", a saída deverá ser
+ compararInteiros(a, b) = "menor";
+ Se a = "875" e b = "799", a saída deverá ser
+	R:	compararInteiros(a, b) = "maior";
+ Para a = "1000" e b = "1000", a saída deverá ser 	R:	compararInteiros(a, b) = "igual".
+ Se a = "4" e b = "300", a saída deverá ser
+R:	compararInteiros(a, b) = "menor".
 
 
  
