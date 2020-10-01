@@ -3,6 +3,7 @@ package aula5.heranca;
 public class Principal {
 	
 	public static void main (String a[]) {
+		
 
 		EmpregadoAssalariado cassio = new EmpregadoAssalariado();
 		cassio.setNome("Cassio");
@@ -11,6 +12,10 @@ public class Principal {
 		cassio.setPis("234234234");
 		cassio.setSalario(10000.00);
 		cassio.setRg("42234234 SSP");
+		
+		System.out.println(cassio);
+		
+		
 		
 		EmpregadoComissionado maria = new EmpregadoComissionado();
 		maria.setNome("Maria");

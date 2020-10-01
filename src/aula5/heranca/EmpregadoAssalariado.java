@@ -11,5 +11,10 @@ public class EmpregadoAssalariado extends Empregado{
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+	
+	@Override
+	public String toString() {
+		return "Nome: "+this.getNome() + " CPF: "+this.getCpf() +" Salario: "+this.getSalario();
+	}
 
 }

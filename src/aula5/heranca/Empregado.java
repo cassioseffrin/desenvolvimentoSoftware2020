@@ -1,34 +1,11 @@
 package aula5.heranca;
 
-public class Empregado {
-	
-	private String nome;
-	
-	private String cpf;
+public abstract class Empregado extends Pessoa {
 	
 	private String pis;
-	
+	private String pasep;
 	private String carteiraTrabalho;
 	
-	private String rg;
-	
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
 	public String getPis() {
 		return pis;
 	}
@@ -45,15 +22,14 @@ public class Empregado {
 		this.carteiraTrabalho = carteiraTrabalho;
 	}
 
-	public String getRg() {
-		return rg;
+	public String getPasep() {
+		return pasep;
 	}
 
-	public void setRg(String rg) {
-		this.rg = rg;
+	public void setPasep(String pasep) {
+		this.pasep = pasep;
 	}
+ 
 	
-	
-
 
 }
