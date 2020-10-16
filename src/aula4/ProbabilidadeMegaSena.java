@@ -7,10 +7,11 @@ package aula4;
 public class ProbabilidadeMegaSena {
 	public static void main(String array[]) {		
 		FatorialRecursivo f = new FatorialRecursivo();
-		double numerador = f.fatorial(new Double(60)) ;
+		Double numero = new Double(60);
+		double numerador = f.fatorial(numero);
 		double denominador = f.fatorial(new Double(6)) * f.fatorial(new Double(54));
 		double res = numerador/denominador;
-		String resultado = String.format("Probabilidade Sena: %.1f ", res );
+		String resultado = String.format("Probabilidade Sena: %s ", res );
 		System.out.println(resultado);
 	}
 }

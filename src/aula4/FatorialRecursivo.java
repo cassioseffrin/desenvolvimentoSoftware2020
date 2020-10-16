@@ -15,11 +15,11 @@ public class FatorialRecursivo {
 	 * Exemplo polimorfismo: 2 metodos com o mesmo nome e parametros de tipos distintos
 	 * Sobrecarga de operadores.
 	 */
-	public double fatorial(double numero) {
-		if (numero <= 1) {
+	public double fatorial(double n) {
+		if (n <= 1) {
 			  return 1;
 		}
-		return numero  *  fatorial(numero-1);
+		return n  *  fatorial(n-1);
 	}
 
 	public long fatorial(long numero) {
