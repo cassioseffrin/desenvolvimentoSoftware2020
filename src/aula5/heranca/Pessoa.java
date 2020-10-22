@@ -2,23 +2,31 @@ package aula5.heranca;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Pessoa implements Comparable<Pessoa>, FluxoDados {
+public class Pessoa implements Comparable<Pessoa>, FluxoDados, Serializable {
+	/**
+	 * 
+	 */
+
+	private static final long serialVersionUID = -6003971823600693849L;
+
 	private String nome;
 	private String cpf;
 	private String rg;
 	private Integer idade;
 	private LocalDate dataNascimento;
-	
-	 
-
 
 	private static String ARQUIVO = "/Users/cassioseffrin/farmacia/pessoa.csv";
+	private static String ARQUIVO_SERIALIZACAO = "/Users/cassioseffrin/farmacia/pessoa.serial";
 
 	@Override
 	public void imprimirColecaoPessoas(ArrayList<Pessoa> lst) {
@@ -99,7 +107,7 @@ public class Pessoa implements Comparable<Pessoa>, FluxoDados {
 	}
 
 	@Override
-	public boolean gravarArquivo() {
+	public boolean gravarArquivoCSV() {
 		try {
 			File f = new File(ARQUIVO);
 			FileOutputStream fos = new FileOutputStream(f, true);
@@ -110,6 +118,23 @@ public class Pessoa implements Comparable<Pessoa>, FluxoDados {
 			return true;
 		} catch (IOException e) {
 			System.out.println("erro ao gravar " + ARQUIVO);
+			return false;
+		}
+	}
+
+	@Override
+	public boolean gravarArquivoSerial() {
+		File f = new File(ARQUIVO_SERIALIZACAO);
+		FileOutputStream fos;
+		try {
+			fos = new FileOutputStream(f);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(this);
+			oos.close();
+			return true;
+		} catch (FileNotFoundException ex) {
+			return false;
+		} catch (IOException ex) {
 			return false;
 		}
 	}
@@ -135,7 +160,23 @@ public class Pessoa implements Comparable<Pessoa>, FluxoDados {
 			System.out.println("Erro ao ler " + ARQUIVO);
 
 		}
+		return null;
+	}
+
+	@Override
+	public Pessoa lerArquivoSerial() throws ClassNotFoundException {
+		try {
+			File f = new File(ARQUIVO_SERIALIZACAO);
+			FileInputStream fis = new FileInputStream(f);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			Pessoa p = (Pessoa) ois.readObject();
+			fis.close();
+			return p;
+		} catch (IOException e) {
+			System.out.println("Erro ao ler " + ARQUIVO_SERIALIZACAO);
+		}
 
 		return null;
 	}
+
 }
