@@ -17,13 +17,17 @@ public class Pessoa implements Comparable<Pessoa>, FluxoDados, Serializable {
 	 * 
 	 */
 
-	private static final long serialVersionUID = -6003971823600693849L;
+	private static final long serialVersionUID = 222L;
 
 	private String nome;
 	private String cpf;
 	private String rg;
 	private Integer idade;
 	private LocalDate dataNascimento;
+	private double altura;
+	private double peso;
+	
+	 
 
 	private static String ARQUIVO = "/Users/cassioseffrin/farmacia/pessoa.csv";
 	private static String ARQUIVO_SERIALIZACAO = "/Users/cassioseffrin/farmacia/pessoa.serial";
@@ -76,6 +80,32 @@ public class Pessoa implements Comparable<Pessoa>, FluxoDados, Serializable {
 
 	public void setIdade(Integer idade) {
 		this.idade = idade;
+	}
+	
+	
+
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+
+	public double getPeso() {
+		return peso;
+	}
+
+	public void setPeso(double peso) {
+		this.peso = peso;
 	}
 
 	@Override

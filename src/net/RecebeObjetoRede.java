@@ -24,7 +24,7 @@ public class RecebeObjetoRede extends Thread {
 
 	public void receber() throws IOException, ClassNotFoundException {
 
-		System.out.println("Ouvindo rede...");
+		System.out.println("Ouvindo rede porta 5000...");
 		serverSocket = new ServerSocket(5000);
 
 		socket = serverSocket.accept();

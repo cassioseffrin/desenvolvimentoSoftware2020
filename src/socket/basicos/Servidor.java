@@ -9,17 +9,18 @@ class Servidor {
 	ServerSocket modificadorDeStrings;
 
 	Servidor() throws IOException {
-		modificadorDeStrings = new ServerSocket(9000);
-		System.out.println("Servidor iniciado na porta: 9000");
+		modificadorDeStrings = new ServerSocket(8000);
+		System.out.println("Servidor iniciado na porta: 8000");
 		while (true) {
 			Socket connectionSocket = modificadorDeStrings.accept();
 			BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
 			DataOutputStream retornaAoCliente = new DataOutputStream(connectionSocket.getOutputStream());
 			textoDoCliente = inFromClient.readLine();
-			String textoDecriptado = Criptografia.decriptar( textoDoCliente);
+			System.out.println("texto original cripto: " + textoDoCliente);
+			String textoDecriptado = Criptografia.decriptar(   textoDoCliente) ;
 			System.out.println("Mensagem Recebida: " + textoDecriptado);
 			sentencaMaiuscula = textoDecriptado.toUpperCase() ;
-			retornaAoCliente.writeBytes(Criptografia.encriptar(sentencaMaiuscula));
+			retornaAoCliente.writeBytes( Criptografia.encriptar( sentencaMaiuscula ) +"\n");
 		}
 	}
 
