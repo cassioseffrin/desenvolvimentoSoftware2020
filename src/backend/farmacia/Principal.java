@@ -1,4 +1,4 @@
-package aula5.heranca;
+package backend.farmacia;
 
 public class Principal {
 	
