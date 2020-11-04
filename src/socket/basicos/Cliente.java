@@ -8,6 +8,10 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class Cliente {
 
 	Cliente() throws UnknownHostException, IOException {
@@ -19,13 +23,12 @@ public class Cliente {
 		Socket clientSocket = new Socket("127.0.0.1", 8000);
 		DataOutputStream saidaParaServidorSocket = new DataOutputStream(clientSocket.getOutputStream());
 		BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-		saidaParaServidorSocket.writeBytes( Criptografia.encriptar(sentenca)    +"\n");
+		saidaParaServidorSocket.writeBytes(Criptografia.encriptar(sentenca) + "\n");
 		stringEsperadoDoServidor = inFromServer.readLine();
-		System.out.println("Mensagem do servidor: " + Criptografia.decriptar(  stringEsperadoDoServidor));
+		System.out.println("Mensagem do servidor: " + Criptografia.decriptar(stringEsperadoDoServidor));
 		clientSocket.close();
 	}
-	
-	
+
 	void metodoComStringBuffer() throws UnknownHostException, IOException {
 		String sentenca;
 		String sentencaMaiuscula;
@@ -39,10 +42,9 @@ public class Cliente {
 		System.out.println("Mensagem do servidor: " + sentencaMaiuscula);
 		clientSocket.close();
 	}
-	
-	public static void main (String a[]) throws UnknownHostException, IOException {
+
+	public static void main(String a[]) throws UnknownHostException, IOException {
 		new Cliente();
 	}
 
-	
 }

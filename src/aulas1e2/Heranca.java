@@ -1,5 +1,9 @@
 package aulas1e2;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 abstract class Animal {
 	// metodo abstrado (sem implementacao)
 	public abstract void tocarSom();

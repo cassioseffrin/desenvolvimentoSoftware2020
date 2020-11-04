@@ -6,6 +6,10 @@ import java.util.Scanner;
  * 3. Faça um algoritmo que peça dois números aos usuários e em seguida multiplique-os. 
  * Mostre na tela o resultado.
  */
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class Exercicio3 {
 	public static void main(String a[]) {
 		Scanner scan = new Scanner(System.in);

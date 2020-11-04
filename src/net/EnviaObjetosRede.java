@@ -16,8 +16,12 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-import aula5.heranca.Cliente;
+import backend.farmacia.Cliente;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class EnviaObjetosRede {
 
 	private Socket socket = null;

@@ -1,5 +1,9 @@
 package aulas1e2;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 class PrincipalMatematica {
 
 	public static void main(String array[]) {

@@ -2,6 +2,10 @@ package aulas1e2;
 
 import java.util.Scanner;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class PrincipalScanner {
 	public static void main(String a[]) {
 		Matematica mat = new Matematica();

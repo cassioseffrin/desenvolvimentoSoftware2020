@@ -1,5 +1,9 @@
 package aula4.exercicios;
 
+/**
+*
+* @author Cassio Seffrin
+*/
 import java.util.Scanner;
 
 /*
@@ -16,9 +20,8 @@ import java.util.Scanner;
  * 
  */
 
-
 public class Exercicio11 {
-	
+
 	public static void main(String a[]) {
 		Scanner scan = new Scanner(System.in);
 		float kms;
@@ -27,6 +30,6 @@ public class Exercicio11 {
 		kms = scan.nextFloat();
 		System.out.println("Quantidade de litros gasto:");
 		qtdLitros = scan.nextFloat();
-		System.out.printf("Média de km por litro: %10.2f", kms/qtdLitros);
+		System.out.printf("Média de km por litro: %10.2f", kms / qtdLitros);
 	}
 }

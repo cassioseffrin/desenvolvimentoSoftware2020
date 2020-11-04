@@ -2,6 +2,10 @@ package aula4.exercicios;
 
 import java.util.Scanner;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class MenorDividendo {
 	public static void main(String a[]) {
 
@@ -25,8 +29,7 @@ public class MenorDividendo {
 			}
 			if (retorno == true) {
 				dividendo++;
-			}
-			else {
+			} else {
 				return dividendo;
 			}
 		}

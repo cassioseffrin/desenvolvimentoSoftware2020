@@ -14,8 +14,12 @@ import java.util.HashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import aula5.heranca.Cliente;
+import backend.farmacia.Cliente;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class RecebeObjetoRede extends Thread {
 
 	private ServerSocket serverSocket = null;

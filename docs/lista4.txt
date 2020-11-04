@@ -1,0 +1,7 @@
+
+Exercícios 4:
+
+ Criar uma Classe de Números, nesta classe criar alguns métodos;
+1. CalculaImprimePrimos() - Calcular e imprimir 20 primeiros números Primos. 
+2. CalculaImprimeRaiz( Integer num) - Calcular e imprimir a raiz de uma entrada Integer
+3. Calcular e imprimir o fibonacci de uma entrada numerica

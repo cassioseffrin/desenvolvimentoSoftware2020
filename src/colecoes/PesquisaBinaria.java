@@ -6,6 +6,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.ArrayList;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class PesquisaBinaria {
 	private List<String> arrayList;
 
@@ -21,7 +25,7 @@ public class PesquisaBinaria {
 		arrayList.add("rosa");
 		arrayList.add("preto");
 		// ordena o a colecao
-		Collections.sort(arrayList); 
+		Collections.sort(arrayList);
 	}
 
 	// pesquisa varios valores na lista

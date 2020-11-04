@@ -1,5 +1,9 @@
 package aulas1e2;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class PrincipalPessoa {
 
 	public static void main(String a[]) {

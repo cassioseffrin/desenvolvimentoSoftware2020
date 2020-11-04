@@ -1,9 +1,12 @@
 package backend.farmacia;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
-public class Cliente extends Pessoa implements Serializable, FluxoDados {
+/**
+*
+* @author Cassio Seffrin
+*/
+public class Cliente extends Pessoa implements Serializable {
 	/**
 	 * 
 	 */
@@ -13,6 +16,10 @@ public class Cliente extends Pessoa implements Serializable, FluxoDados {
 	public static String ARQUIVO_SERIALIZACAO = "/Users/cassioseffrin/farmacia/cliente.serial";
 
 	private String telefone;
+	
+	public Cliente() {
+		
+	}
 
 	public Cliente(String nome, String cpf, String rg, Integer idade, String telefone) {
 		super(nome, cpf, rg, idade);
@@ -32,23 +39,23 @@ public class Cliente extends Pessoa implements Serializable, FluxoDados {
 		return super.toString() + " telefone cliente: " + getTelefone();
 	}
 
-	@Override
-	public boolean gravarArquivoCSV() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+//	@Override
+//	public boolean gravarArquivoCSV() {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
 
-	@Override
-	public ArrayList<Pessoa> lerTodos() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public ArrayList<Pessoa> lerTodos() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
-	@Override
-	public void imprimirColecaoPessoas(ArrayList<Pessoa> lst) {
-		// TODO Auto-generated method stub
-		
-	}
+//	@Override
+//	public void imprimirColecaoPessoas(ArrayList<Pessoa> lst) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 
 //	@Override
 //	public ArrayList<Cliente> lerTodos() {

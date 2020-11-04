@@ -3,6 +3,10 @@ package socket.basicos;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class Criptografia {
 
 	public static String encriptar(String sentenca) {

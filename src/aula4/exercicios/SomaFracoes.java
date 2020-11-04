@@ -2,16 +2,20 @@ package aula4.exercicios;
 
 import java.util.Scanner;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class SomaFracoes {
-	
+
 	public static void main(String[] args) {
 
 		int numerador1;
 		int denominador1;
-		
+
 		int numerador2;
 		int denominador2;
-		
+
 		int numeradorFinal;
 		int denominadorFinal;
 		int temporario;
@@ -47,13 +51,10 @@ public class SomaFracoes {
 			}
 		}
 
-		System.out.printf(" Resultado: (%s/%s)", numeradorFinal,denominadorFinal);
+		System.out.printf(" Resultado: (%s/%s)", numeradorFinal, denominadorFinal);
 		scan.close();
 	}
 }
-
-
-
 
 //
 //Reduzida

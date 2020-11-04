@@ -5,6 +5,10 @@ import java.util.Scanner;
 /*
  * 2. Faça um algoritmo que peça o nome do usuário e em seguida mostre o mesmo na tela.
  */
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class Exercicio2 {
 	public static void main(String a[]) {
 		String nome;

@@ -6,15 +6,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-/*
- *
-*	enum lista {JANEIRO, FEV};
-* */
-//Date d = new Date();
-//Calendar c = Calendar.getInstance();
-//LocalDateTime data = LocalDateTime.now();
-
-
+/**
+*
+* @author Cassio Seffrin
+*/
 public class Exercicio1a4 {
 	enum lista {
 		JANEIRO, FEVEIRO, MARCO, ABRIL, MAIO, JUNHO, JULHO, AGOSTO, SETEMBRO, OUTUBRO, NOVEMBRO, DEZEMBRO

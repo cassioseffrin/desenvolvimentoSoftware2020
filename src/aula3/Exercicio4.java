@@ -6,8 +6,13 @@ import java.util.Scanner;
  * 4. Faça um algoritmo que lê os valores de 3 números
  *  em seguida mostre na tela a média aritmética dos mesmos.
  */
+
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class Exercicio4 {
-	
+
 	public static void main(String a[]) {
 		Scanner scan = new Scanner(System.in);
 		float n1;
@@ -20,7 +25,7 @@ public class Exercicio4 {
 		n2 = scan.nextFloat();
 		System.out.println("Digite o numero 3: ");
 		n3 = scan.nextFloat();
-		media = (n1 + n2 + n3)/3;
+		media = (n1 + n2 + n3) / 3;
 		System.out.printf("resultado: %2.2f", media);
 	}
 }

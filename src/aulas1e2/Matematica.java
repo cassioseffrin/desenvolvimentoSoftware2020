@@ -1,5 +1,9 @@
 package aulas1e2;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 class Matematica {
 
 	float multiplica(float a, float b) {

@@ -1,5 +1,9 @@
 package aulas1e2;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class Pessoa {
 	/*
 	 * Os tipos private fazem parte do pilar da OOP encapsulamento.

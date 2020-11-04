@@ -2,6 +2,10 @@ package colecoes;
 
 import java.util.PriorityQueue;
 
+/**
+*
+* @author Cassio Seffrin
+*/
 public class Fila {
 	public static void main(String args[]) throws InterruptedException {
 		PriorityQueue<Integer> fila = new PriorityQueue<Integer>();

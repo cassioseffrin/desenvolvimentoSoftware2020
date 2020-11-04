@@ -1,0 +1,11 @@
+- cliente ok
+- funcionario ?
+
+- remedio 
+- receita
+
+- conta
+- pagamento
+- recibo
+- pedidos  de entrada / saida ( e seus itens )
+- orçamentos   ( e seus itens )

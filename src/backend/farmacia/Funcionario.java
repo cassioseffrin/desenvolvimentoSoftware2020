@@ -1,14 +1,16 @@
 package backend.farmacia;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class Funcionario extends Pessoa {
- 
+
 	private static final long serialVersionUID = -167730181170170139L;
-	
+
 	private String pis;
 	private String pasep;
 	private String carteiraTrabalho;
-	
-	
 
 	public Funcionario(String nome, String cpf, String rg, Integer idade, String pis, String pasep,
 			String carteiraTrabalho) {
@@ -41,7 +43,5 @@ public class Funcionario extends Pessoa {
 	public void setPasep(String pasep) {
 		this.pasep = pasep;
 	}
- 
-	
 
 }

@@ -6,8 +6,12 @@ import java.util.Scanner;
  * 5. Faça um algoritmo para calcular o valor total de venda, dado que o 
  * usuário deverá entrar com o valor unitário de um produto e a quantidade vendida.
  */
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public class Exercicio5 {
-	
+
 	public static void main(String a[]) {
 		Scanner scan = new Scanner(System.in);
 		float valorUnitario;
@@ -16,6 +20,6 @@ public class Exercicio5 {
 		valorUnitario = scan.nextFloat();
 		System.out.println("Digite quantidade:");
 		quantidade = scan.nextFloat();
-		System.out.printf("Total R$: %10.2f", valorUnitario*quantidade);
+		System.out.printf("Total R$: %10.2f", valorUnitario * quantidade);
 	}
 }

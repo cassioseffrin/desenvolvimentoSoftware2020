@@ -8,15 +8,17 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.List;
 
+/**
+*
+* @author Cassio Seffrin
+*/
 public class EntidadePersistente implements Serializable {
-
-	/**
-	 * 
-	 */
+ 
 	private static final long serialVersionUID = 1L;
 
-	public static <E> boolean serializarEntidade(E entidade, String arquivo) {
+	public static <E> boolean serializarEntidade(List<E> entidade, String arquivo) {
 		File f = new File(arquivo);
 		FileOutputStream fos;
 		try {
@@ -34,12 +36,12 @@ public class EntidadePersistente implements Serializable {
 	}
 	
  
-	public static <E> E lerArquivoSerial(String arquivo) throws ClassNotFoundException {
+	public static <E> List<E> lerArquivoSerial(String arquivo) throws ClassNotFoundException {
 		try {
 			File f = new File(arquivo);
 			FileInputStream fis = new FileInputStream(f);
 			ObjectInputStream ois = new ObjectInputStream(fis);
-			E o = (E) ois.readObject();
+			List<E> o = (List<E>) ois.readObject();
 			fis.close();
 			return o;
 		} catch (IOException e) {

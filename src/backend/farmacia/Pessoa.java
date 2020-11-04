@@ -12,6 +12,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 public abstract class Pessoa extends EntidadePersistente implements Comparable<Pessoa> {
 	/**
 	 * 
@@ -26,8 +30,6 @@ public abstract class Pessoa extends EntidadePersistente implements Comparable<P
 	private LocalDate dataNascimento;
 	private double altura;
 	private double peso;
-
-	
 
 //	@Override
 //	public void imprimirColecaoPessoas(ArrayList<Pessoa> lst) {
@@ -130,7 +132,5 @@ public abstract class Pessoa extends EntidadePersistente implements Comparable<P
 		else
 			return 0;
 	}
-
-	
 
 }

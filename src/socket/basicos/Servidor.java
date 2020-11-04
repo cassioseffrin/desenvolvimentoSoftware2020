@@ -3,6 +3,10 @@ package socket.basicos;
 import java.io.*;
 import java.net.*;
 
+/**
+ *
+ * @author Cassio Seffrin
+ */
 class Servidor {
 	String textoDoCliente;
 	String sentencaMaiuscula;
@@ -17,10 +21,10 @@ class Servidor {
 			DataOutputStream retornaAoCliente = new DataOutputStream(connectionSocket.getOutputStream());
 			textoDoCliente = inFromClient.readLine();
 			System.out.println("texto original cripto: " + textoDoCliente);
-			String textoDecriptado = Criptografia.decriptar(   textoDoCliente) ;
+			String textoDecriptado = Criptografia.decriptar(textoDoCliente);
 			System.out.println("Mensagem Recebida: " + textoDecriptado);
-			sentencaMaiuscula = textoDecriptado.toUpperCase() ;
-			retornaAoCliente.writeBytes( Criptografia.encriptar( sentencaMaiuscula ) +"\n");
+			sentencaMaiuscula = textoDecriptado.toUpperCase();
+			retornaAoCliente.writeBytes(Criptografia.encriptar(sentencaMaiuscula) + "\n");
 		}
 	}
 
