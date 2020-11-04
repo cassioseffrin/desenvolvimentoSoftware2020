@@ -1,37 +1,44 @@
 package backend.farmacia;
-
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-
-/**
- *
- * @author Cassio Seffrin
- */
 public class PrincipalColecoes {
 	public static void main(String a[]) throws ClassNotFoundException {
-
-//		Cliente c = new Cliente("Cassio", "234234", "asd2342", 23, "49 34420500");
-//		c.serializarEntidade(c, Cliente.ARQUIVO_SERIALIZACAO);
-//		Object obj = Cliente.lerArquivoSerial(Cliente.ARQUIVO_SERIALIZACAO);
-//		System.out.println(obj);
-
+			 
 //		Farmaceutico f1 = new Farmaceutico("Cassio", "234234", "asd2342", 23, "pis234234", "pasep234234", "Cart23234234", "anvisa23q4" );
 //		Farmaceutico f2 = new Farmaceutico("Janaina", "234234", "asd2342", 23, "pis234234", "pasep234234", "Cart23234234", "anvisa23q4" );
 //		Farmaceutico f3 = new Farmaceutico("Maria", "234234", "asd2342", 23, "pis234234", "pasep234234", "Cart23234234", "anvisa23q4" );
-//		List<Farmaceutico> l = new ArrayList<>();
-//		l.add(f1);
-//		l.add(f2);
-//		l.add(f3);
-//		Farmaceutico.serializarEntidade(l, Farmaceutico.ARQUIVO_SERIALIZACAO);
-
-		List<Farmaceutico> lst = Farmaceutico.lerArquivoSerial(Farmaceutico.ARQUIVO_SERIALIZACAO);
-		System.out.println(lst.size());
-
-		for (Farmaceutico f : lst) {
-			System.out.println(f);
+//	
+//		List<Farmaceutico> listaFarmaceuticos = new ArrayList<>();
+//		listaFarmaceuticos.add(f1);
+//		listaFarmaceuticos.add(f2);
+//		listaFarmaceuticos.add(f3);
+//		
+//		Farmaceutico.serializarEntidade(listaFarmaceuticos, Farmaceutico.ARQUIVO_SERIALIZACAO);
+//		
+		List<Farmaceutico> lstFarmaceuticos = Farmaceutico.lerArquivoSerial(Farmaceutico.ARQUIVO_SERIALIZACAO);
+		
+//		Farmaceutico f4 = new Farmaceutico("Max", "234234", "asd2342", 23, "pis234234", "pasep234234", "Cart23234234", "anvisa23q4" );
+//		lstFarmaceuticos.add(f4);
+//		
+//		
+//		Farmaceutico.serializarEntidade(lstFarmaceuticos, Farmaceutico.ARQUIVO_SERIALIZACAO);
+		
+		System.out.println("Tamanho da lista: "+ lstFarmaceuticos.size());
+		for(Farmaceutico f : lstFarmaceuticos) {
+			System.out.printf("\nNome farmaceutico: %s, cpf: %s" ,f.getNome() , f.getCpf());
 		}
-
+//		
+ 
+//		Farmaceutico fp = new Farmaceutico("Cassio", "234234", "asd2342", 23, "pis234234", "pasep234234", "Cart23234234", "anvisa23q4" );
+//		fp.setIdade(23);
+//		
+//		int resultado = Collections.binarySearch(lstFarmaceuticos, fp);
+//		if (resultado >= 0)
+//			System.out.printf("Encontrado %d\n", resultado);
+//		else
+//			System.out.printf("Nao Encontrado (%d)\n", resultado);
+//		
+ 
 	}
 }
 

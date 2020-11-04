@@ -5,7 +5,7 @@ package genericsAulas6e7;
 /**
  *
  * @author Cassio Seffrin
- */s
+ */
 public class SobrecargaMetodo {
 	// metodo imprimirArray para imprimir um array de Integer
 	public static void imprimirArray(Integer[] arrayEntrada) {

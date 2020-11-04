@@ -29,16 +29,13 @@ public final class FarmaceuticoDao {
 		setConnection((Connection) con);
 	}
 
-	public boolean inserir(Farmaceutico ea) {
+	public boolean inserir(Farmaceutico farmaceutico) {
 		String sql = "INSERT INTO farmaceutico( nome,  cpf ) VALUES(?,?)";
 
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
-			stmt.setString(1, ea.getNome());
-//	            stmt.setString(2, ea.getSobreNome());
-			stmt.setString(2, ea.getCpf());
-//	            stmt.setString(4, farmaceutico.getSexo());
-//	            stmt.setDouble(5, farmaceutico.getSalarioMensal());
+			stmt.setString(1, farmaceutico.getNome());
+			stmt.setString(2, farmaceutico.getCpf());
 			stmt.execute();
 			return true;
 		} catch (SQLException ex) {

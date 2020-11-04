@@ -128,9 +128,20 @@ public abstract class Pessoa extends EntidadePersistente implements Comparable<P
 		if (this.idade < pessoa.idade)
 			return -1;
 		if (this.idade > pessoa.idade)
-			return 5;
+			return 1;
 		else
 			return 0;
 	}
+	
+//	@Override
+//	public int compareTo(Pessoa pessoa) {
+//		if (this.nome.contains(pessoa.getNome())) {
+//			return  1;
+//		}else {
+//			return  -1;
+//		}
+//	}	
+	
+		
 
 }

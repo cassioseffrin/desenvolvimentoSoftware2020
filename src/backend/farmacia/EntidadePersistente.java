@@ -10,23 +10,22 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.List;
 
-/**
-*
-* @author Cassio Seffrin
-*/
 public class EntidadePersistente implements Serializable {
- 
+
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 
-	public static <E> boolean serializarEntidade(List<E> entidade, String arquivo) {
+	public static <E> boolean serializarEntidade(List<E> lstEntidades, String arquivo) {
 		File f = new File(arquivo);
 		FileOutputStream fos;
 		try {
 			fos = new FileOutputStream(f);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(entidade );
+			oos.writeObject(lstEntidades);
 			oos.close();
-			System.out.println("Entidade gravada com sucesso! ");
+			System.out.println("List<E> gravada com sucesso! ");
 			return true;
 		} catch (FileNotFoundException ex) {
 			return false;
@@ -41,9 +40,9 @@ public class EntidadePersistente implements Serializable {
 			File f = new File(arquivo);
 			FileInputStream fis = new FileInputStream(f);
 			ObjectInputStream ois = new ObjectInputStream(fis);
-			List<E> o = (List<E>) ois.readObject();
+			List<E> lstEntidades = (List<E>) ois.readObject();
 			fis.close();
-			return o;
+			return lstEntidades;
 		} catch (IOException e) {
 			System.out.println("Erro ao ler " + arquivo);
 		}

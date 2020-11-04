@@ -29,14 +29,19 @@ public class Farmaceutico extends Funcionario implements Serializable {
 		this.registroAnvisa = registroAnvisa;
 	}
 
+ 
+
 	@Override
 	public String toString() {
-		return "Farmaceiutico [registroAnvisa=" + registroAnvisa + ", getRegistroAnvisa()=" + getRegistroAnvisa()
+		return "Farmaceiutico [registro anvisa: " + registroAnvisa + ", getRegistroAnvisa()=" + getRegistroAnvisa()
 				+ ", getPis()=" + getPis() + ", getCarteiraTrabalho()=" + getCarteiraTrabalho() + ", getPasep()="
 				+ getPasep() + ",  Nome: " + getNome() + ", CPF: " + getCpf() + ", getRg()=" + getRg() + ", getIdade()="
 				+ getIdade() + ", getDataNascimento()=" + getDataNascimento() + ", getAltura()=" + getAltura()
 				+ ", getPeso()=" + getPeso() + ", toString()=" + super.toString() + ", toCSV()=" + toCSV()
 				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
 	}
+	
+ 
+
 
 }
