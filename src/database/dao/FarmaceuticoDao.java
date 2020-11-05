@@ -24,18 +24,33 @@ public final class FarmaceuticoDao {
 		this.connection = con;
 	}
 
+	public void closeConnection() {
+		try {
+			this.connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			Logger.getLogger("Falha ao fechar conexao");
+		}
+	}
+
 	public FarmaceuticoDao() {
 		Connection con = DatabaseMySQL.getConnection();
 		setConnection((Connection) con);
 	}
 
 	public boolean inserir(Farmaceutico farmaceutico) {
-		String sql = "INSERT INTO farmaceutico( nome,  cpf ) VALUES(?,?)";
-
+		String sql = "INSERT INTO farmaceutico( nome,  cpf, rg,   idade,   pis,   pasep,  carteiraTrabalho, registroAnvisa  ) VALUES(?,?, ?,?,?,?,?,?)";
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setString(1, farmaceutico.getNome());
 			stmt.setString(2, farmaceutico.getCpf());
+			stmt.setString(3, farmaceutico.getRg());
+			stmt.setInt(4, farmaceutico.getIdade());
+			stmt.setString(5, farmaceutico.getPis());
+			stmt.setString(6, farmaceutico.getPasep());
+			stmt.setString(7, farmaceutico.getCarteiraTrabalho());
+			stmt.setString(8, farmaceutico.getRegistroAnvisa());
+
 			stmt.execute();
 			return true;
 		} catch (SQLException ex) {
@@ -64,9 +79,18 @@ public final class FarmaceuticoDao {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			ResultSet resultado = stmt.executeQuery();
 			while (resultado.next()) {
-				Farmaceutico f1 = new Farmaceutico("Cassio", "234234", "asd2342", 23, "pis234234", "pasep234234",
-						"Cart23234234", "anvisa23q4");
-
+				Integer id = resultado.getInt(1);
+				String nome = resultado.getString(2);
+				String cpf = resultado.getString(3);
+				String rg = resultado.getString(4);
+				Integer idade = resultado.getInt(5);
+				String pis = resultado.getString(6);
+				String pasep = resultado.getString(7);
+				String carteriaTrabalho = resultado.getString(8);
+				String registroAnvisa = resultado.getString(9);
+				Farmaceutico f1 = new Farmaceutico(nome, cpf, rg, idade, pis, pasep,
+						carteriaTrabalho,registroAnvisa);
+				f1.setId(id);
 				lista.add(f1);
 			}
 		} catch (SQLException ex) {
@@ -76,11 +100,13 @@ public final class FarmaceuticoDao {
 	}
 
 	public boolean atualizar(Farmaceutico farmaceuticoSelecionado) {
-		String sql = "UPDATE farmaceutico SET nome=?  WHERE id=?";
+		String sql = "UPDATE farmaceutico SET nome=?, cpf=?, rg=?  WHERE id=?";
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setString(1, farmaceuticoSelecionado.getNome());
-
+			stmt.setString(2, farmaceuticoSelecionado.getCpf());
+			stmt.setString(3, farmaceuticoSelecionado.getRg());
+			stmt.setInt(4, farmaceuticoSelecionado.getId());
 			stmt.execute();
 			return true;
 		} catch (SQLException ex) {

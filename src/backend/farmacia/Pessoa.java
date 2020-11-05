@@ -23,6 +23,8 @@ public abstract class Pessoa extends EntidadePersistente implements Comparable<P
 
 	private static final long serialVersionUID = 222L;
 
+	
+	private Integer id;
 	private String nome;
 	private String cpf;
 	private String rg;
@@ -47,6 +49,16 @@ public abstract class Pessoa extends EntidadePersistente implements Comparable<P
 
 	public Pessoa() {
 
+	}
+	
+	
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getNome() {

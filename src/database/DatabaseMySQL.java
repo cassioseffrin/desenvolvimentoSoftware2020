@@ -22,7 +22,7 @@ public class DatabaseMySQL {
     }
     private static Connection conectar() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
              connection = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1/farmacia", "cassio","123");   
             return  connection;
         } catch (SQLException | ClassNotFoundException ex) {
