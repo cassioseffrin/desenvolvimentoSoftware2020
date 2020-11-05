@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  * @author cassioseffrin
  */
 
-public class DatabaseMySQL {
+public class DatabaseMySQLSingleton {
     private static Connection connection;
     public static Connection getConnection(){
         if (connection == null){
@@ -26,15 +26,15 @@ public class DatabaseMySQL {
              connection = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1/farmacia", "cassio","123");   
             return  connection;
         } catch (SQLException | ClassNotFoundException ex) {
-            Logger.getLogger(DatabaseMySQL.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatabaseMySQLSingleton.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
     }
     private void desconectar() {
         try {
-            DatabaseMySQL.connection.close();
+            DatabaseMySQLSingleton.connection.close();
         } catch (SQLException ex) {
-            Logger.getLogger(DatabaseMySQL.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatabaseMySQLSingleton.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

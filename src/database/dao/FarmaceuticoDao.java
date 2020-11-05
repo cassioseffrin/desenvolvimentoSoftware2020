@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import backend.farmacia.Farmaceutico;
-import database.DatabaseMySQL;
+import database.DatabaseMySQLSingleton;
 
 /**
  *
@@ -34,7 +34,7 @@ public final class FarmaceuticoDao {
 	}
 
 	public FarmaceuticoDao() {
-		Connection con = DatabaseMySQL.getConnection();
+		Connection con = DatabaseMySQLSingleton.getConnection();
 		setConnection((Connection) con);
 	}
 
