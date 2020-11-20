@@ -9,36 +9,34 @@ import java.util.HashSet;
  * @author Cassio Seffrin
  */
 
-public class TestePerformance {
-	public static void main(String[] args) {
-		TestePerformance t = new TestePerformance();
-		t.ArrayListTest();
-		// t.HashSetTest();
-	}
+public class TestePerformance extends Thread {
+//	public static void main(String[] args) {
+//		TestePerformance t = new TestePerformance();
+//		t.ArrayListTest();
+//		// t.HashSetTest();
+//	}
+
+//	public TestePerformance() {
+//		ArrayListTest();
+//
+//	}
 
 	public void ArrayListTest() {
 		Collection<String> colecao = new ArrayList<String>();
-
-		Collection col2 = new ArrayList();
-
-		for (int i = 0; i < 10; i++) {
-			col2.add("teste_" + i);
-		}
-
-		System.out.printf("\n  : %s", col2);
-
 		long tempoInicial = System.currentTimeMillis();
 
-		for (int i = 0; i < 60000; i++) {
+		for (int i = 0; i < 100; i++) {
 			colecao.add("teste");
-		}
-
-		for (int i = 0; i < 30000; i++) {
-			colecao.contains("teste");
+			try {
+				sleep(1000);
+			} catch (InterruptedException e) {
+			}
+//			double progresso =  ();
+			System.out.println(i + " - tread: " + getName());
 		}
 
 		long tempoFinal = System.currentTimeMillis();
-		System.out.printf("ArrayList time ... %.3f segundos%n", (tempoFinal - tempoInicial) / 1000d);
+		System.out.printf("\nArrayList time ... %.3f segundos%n", (tempoFinal - tempoInicial) / 1000d);
 	}
 	/*
 	 * O contains da ArrayList faz uma busca linear, já o HashSet utiliza uma tabela
@@ -60,6 +58,12 @@ public class TestePerformance {
 
 		long tempoFinal = System.currentTimeMillis();
 		System.out.printf("HashSet time ... %.3f segundos%n", (tempoFinal - tempoInicial) / 1000d);
-	}
+		
 
+	}
+//
+	@Override
+	public void run() {
+		ArrayListTest();	
+	}
 }

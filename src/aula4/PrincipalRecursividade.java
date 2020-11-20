@@ -10,7 +10,7 @@ package aula4;
  * @author Cassio Seffrin
  */
 public class PrincipalRecursividade {
-	public static void main(String array[]) {
+	public static void main(String array[]) throws InterruptedException {
 		FatorialRecursivo recursividade = new FatorialRecursivo();
 		long resultado = recursividade.fatorial(4);
 		recursividade.imprimirNumero(4, resultado);

@@ -15,7 +15,7 @@ public class PrincipalColecoes {
 //		
 //		Farmaceutico.serializarEntidade(listaFarmaceuticos, Farmaceutico.ARQUIVO_SERIALIZACAO);
 //		
-		List<Farmaceutico> lstFarmaceuticos = Farmaceutico.lerArquivoSerial(Farmaceutico.ARQUIVO_SERIALIZACAO);
+		List<Farmaceutico> lstFarmaceuticos = Farmaceutico.lerListaSerial(Farmaceutico.ARQUIVO_SERIALIZACAO);
 		
 //		Farmaceutico f4 = new Farmaceutico("Max", "234234", "asd2342", 23, "pis234234", "pasep234234", "Cart23234234", "anvisa23q4" );
 //		lstFarmaceuticos.add(f4);

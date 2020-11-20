@@ -26,7 +26,8 @@ public class FatorialRecursivo {
 		return n * fatorial(n - 1);
 	}
 
-	public long fatorial(long numero) {
+	public long fatorial(long numero) throws InterruptedException {
+		Thread.sleep(1000);
 		if (numero <= 1) {
 			return 1;
 		}

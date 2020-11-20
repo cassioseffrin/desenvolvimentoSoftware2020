@@ -15,9 +15,10 @@ public class EntidadePersistente implements Serializable {
 	/**
 	 * 
 	 */
+
 	private static final long serialVersionUID = 1L;
 
-	public static <E> boolean serializarEntidade(List<E> lstEntidades, String arquivo) {
+	public static <E> boolean serializarListaEntidade(List<E> lstEntidades, String arquivo) {
 		File f = new File(arquivo);
 		FileOutputStream fos;
 		try {
@@ -33,9 +34,19 @@ public class EntidadePersistente implements Serializable {
 			return false;
 		}
 	}
-	
- 
-	public static <E> List<E> lerArquivoSerial(String arquivo) throws ClassNotFoundException {
+
+	public static <E> boolean adicioarElementoLista(E elemento, String arquivo) {
+		try {
+			List<E> lstE = lerListaSerial(arquivo);
+			lstE.add(elemento);
+			serializarListaEntidade(lstE, arquivo);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public static <E> List<E> lerListaSerial(String arquivo) throws ClassNotFoundException {
 		try {
 			File f = new File(arquivo);
 			FileInputStream fis = new FileInputStream(f);
@@ -49,23 +60,20 @@ public class EntidadePersistente implements Serializable {
 
 		return null;
 	}
-	
-	
-	
-//	public <E> boolean gravarArquivoCSV(E entidade  ,String arquivo ) {
-//		try {
-//			File f = new File(arquivo);
-//			FileOutputStream fos = new FileOutputStream(f, true);
-//			fos.write(entidade.toCSV().getBytes());
-//			fos.flush();
-//			fos.close();
-//			System.out.printf("A Cliente %s foi salva com sucesso!\n");
-//			return true;
-//		} catch (IOException e) {
-//			System.out.println("erro ao gravar " + arquivo);
-//			return false;
-//		}
-//	}
 
+	public static <E> boolean gravarArquivoCSV(E entidade, String arquivo) {
+		try {
+			File f = new File(arquivo);
+			FileOutputStream fos = new FileOutputStream(f, true);
+//			fos.write(entidade.toCSV().getBytes());
+			fos.flush();
+			fos.close();
+			System.out.printf("A Cliente %s foi salva com sucesso!\n");
+			return true;
+		} catch (IOException e) {
+			System.out.println("erro ao gravar " + arquivo);
+			return false;
+		}
+	}
 
 }
