@@ -7,15 +7,16 @@ package genericsAulas6e7;
 public class EncontreValorMaximo {
 	// determina o maior dos 3 objetos Comparable
 	public static <T extends Comparable<T>> T maximo(T x, T y, T z) {
-		T max = x; // assume que x eh inicialmente o maior
-
+		// assume que x eh inicialmente o maior
+		T max = x; 
+		// y eh o maior ate agora
 		if (y.compareTo(max) > 0)
-			max = y; // y eh o maior ate agora
-
+			max = y; 
+		// z e o maior
 		if (z.compareTo(max) > 0)
-			max = z; // z e o maior
-
-		return max; // retorna o maior objeto
+			max = z; 
+		// retorna o maior objeto
+		return max; 
 	}
 
 	public static void main(String args[]) {
